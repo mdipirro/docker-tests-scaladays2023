@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  scalaTest:
+    image: scala-days-2023:latest<localBuild>
+    ports:
+      - "0:8080"
