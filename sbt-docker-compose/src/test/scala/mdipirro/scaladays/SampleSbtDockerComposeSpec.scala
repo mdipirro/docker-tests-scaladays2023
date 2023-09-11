@@ -56,7 +56,7 @@ class SampleSbtDockerComposeSpec extends FixtureAnyFunSuite
       configMap(key).toString
     }
     else {
-      throw new TestFailedException(
+      throw TestFailedException(
         message = s"Cannot find the expected Docker Compose service key '$key' in the configMap",
         failedCodeStackDepth = 10
       )

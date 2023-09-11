@@ -20,10 +20,10 @@ def bootServer(): Unit =
           </html>
     """.stripMargin
   val port = 8080
-  val listener = new ServerSocket(port)
+  val listener = ServerSocket(port)
 
   while (true) {
     val sock = listener.accept()
-    new PrintWriter(sock.getOutputStream, true).println(text)
+    PrintWriter(sock.getOutputStream, true).println(text)
     sock.shutdownOutput()
   }
